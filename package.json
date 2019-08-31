@@ -4,7 +4,7 @@
 	},
 	"bundleDependencies": false,
 	"deprecated": false,
-	"description": "Experimental eat-spit pattern for JS parameter object, similar to Python's kwargs.pop(key, default)",
+	"description": "Experimental eat/spit pattern for JS literal parameter object, similar to Python's kwargs.pop(key, default)",
 	"homepage": "https://github.com/EliasHasle/kwargs.js#readme",
 	"main": "./kwargs.js",
 	"name": "kwargs.js",
@@ -16,5 +16,5 @@
 	"build": "rollup -c"
 	},
 	"type": "module",
-	"version": "0.0.1"
+	"version": "0.0.2"
 }
