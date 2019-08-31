@@ -11,8 +11,10 @@ Import like this:
 import {eat, spit} from "kwargs.js";
 ````
 
-`eat(pars, key, defaultValue=undefined, required=false, throwOnMissing=true)` will pop named properties from the parameter object, optionally filling with defaults, and optionally throwing an error when a value is not set. The function can optionally take array inputs. See the code for more details.
+`eat(pars, key, defaultValue=undefined, required=false, throwOnMissing=true)` will pop named properties from the parameter object, optionally filling with defaults, and optionally throwing an error when a value is not set. If `key` is a string or symbol, the function returns a single value. If `key` is an array of keys, the function will return an object with keys and values.
+
+If `key` is an array of keys, the function will try to distribute the other arguments if they are arrays, or otherwise use the same value for all. This can go wrong in the unusual case that the intention is to assign the same array as default value to multiple outputs. See the code.
 
 `spit(pars, throwError=true)` will complain on all remaining pars.
 
-A typical pattern will be to use this with inheritance, such that subclasses `eat` the arguments that belong to them and forward the remaining ones to the superclass. Finally, the superclass will `spit` invalid arguments.
+A typical pattern will be to use this with inheritance, such that subclasses `eat` the arguments that belong to them and forward the remaining ones to the superclass. Finally, the superclass will `spit` invalid arguments. Note that with classes, the call to `super` must happen _before_ any reference to `this`. Therefore, the output of `eat` must be stored in the local scope before `super`, and then stored on the object.
