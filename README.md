@@ -17,4 +17,4 @@ If `key` is an array of keys, the function will try to distribute the other argu
 
 `spit(pars, throwError=true)` will complain on all remaining pars.
 
-A typical pattern will be to use this with inheritance, such that subclasses `eat` the arguments that belong to them and forward the remaining ones to the superclass. Finally, the superclass will `spit` invalid arguments. Note that with classes, the call to `super` must happen _before_ any reference to `this`. Therefore, the output of `eat` must be stored in the local scope before `super`, and then stored on the object.
+A typical pattern will be to use this with inheritance, such that subclasses `eat` the arguments that belong to them and forward the remaining ones to the superclass. Finally, the superclass will `spit` invalid arguments. Note that with classes, the call to `super` must happen before any reference to `this`. Therefore, the output of `eat` must be stored in the local scope _before_ `super(pars)`, and _then_ stored on the object (if desired).
