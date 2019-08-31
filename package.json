@@ -1,0 +1,20 @@
+{
+	"bugs": {
+	"url": "https://github.com/EliasHasle/kwargs.js/issues"
+	},
+	"bundleDependencies": false,
+	"deprecated": false,
+	"description": "Experimental eat-spit pattern for JS parameter object, similar to Python's kwargs.pop(key, default)",
+	"homepage": "https://github.com/EliasHasle/kwargs.js#readme",
+	"main": "./kwargs.js",
+	"name": "kwargs.js",
+	"repository": {
+	"type": "git",
+	"url": "git+https://github.com/EliasHasle/kwargs.js.git"
+	},
+	"scripts": {
+	"build": "rollup -c"
+	},
+	"type": "module",
+	"version": "0.0.1"
+}
