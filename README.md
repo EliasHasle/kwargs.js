@@ -1,5 +1,5 @@
 # kwargs.js
-Experimental eat/spit pattern for JS literal parameter object, similar to Python's kwargs.pop(key, default)
+Experimental eat/spit pattern for JS literal parameter object, similar to Python's `kwargs.pop(key, default)`.
 
 Installation:
 ````
